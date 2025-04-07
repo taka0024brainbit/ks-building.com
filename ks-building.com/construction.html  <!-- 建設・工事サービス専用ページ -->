@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>建設・工事サービス - ケイエスビルド株式会社</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__logo">
+            <a href="/">
+                <img src="img/rogo.svg" alt="ケイエスビルド株式会社" width="200" height="50">
+            </a>
+        </h1>
+    </header>
+
+    <main>
+        <section id="construction" class="section">
+            <div class="section__inner">
+                <h2 class="section__title">建設・工事サービス</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <h3>総合建設工事</h3>
+                        <ul>
+                            <li>土木・建築の設計</li>
+                            <li>施工・監理</li>
+                            <li>専門工事サービス</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>構造関連工事</h3>
+                        <ul>
+                            <li>とび・土工</li>
+                            <li>石工</li>
+                            <li>鋼構造物</li>
+                            <li>鉄筋</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>設備関連工事</h3>
+                        <ul>
+                            <li>電気工事</li>
+                            <li>管工事</li>
+                            <li>機械器具設置</li>
+                            <li>電気通信</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>仕上関連工事</h3>
+                        <ul>
+                            <li>舗装</li>
+                            <li>板金</li>
+                            <li>塗装</li>
+                            <li>防水</li>
+                            <li>内装仕上</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>解体工事</h3>
+                        <ul>
+                            <li>建物解体</li>
+                            <li>産業廃棄物処理</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copyright">&copy; 2024 ケイエスビルド株式会社 All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
