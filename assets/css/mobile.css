@@ -1,0 +1,184 @@
+/* ハンバーガーメニューボタン */
+.header__menu-button {
+    display: none; /* デフォルトでは非表示 (デスクトップ) */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1010;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.header__menu-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color); /* main.cssの変数を使用 */
+    margin: 5px auto;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* モバイル表示 (768px以下) */
+@media (max-width: 768px) {
+    .header__menu-button {
+        display: block; /* モバイルで表示 */
+    }
+
+    .header__nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* 初期状態は完全に画面外 */
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--white); /* main.cssの変数を使用 */
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        transform: translateX(0); /* transform をリセット */
+        transition: right 0.3s ease-in-out; /* right プロパティでアニメーション */
+        padding-top: 60px; /* ヘッダーの高さ分下げる */
+        z-index: 1005;
+        overflow-y: auto;
+    }
+
+    .header__nav.is-active {
+        right: 0; /* アクティブ時に表示 */
+    }
+
+    .header__nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 1.5rem;
+        list-style: none; /* main.cssから継承されない可能性を考慮 */
+    }
+
+     .header__nav-list a {
+        font-size: 1.1rem;
+        display: block;
+        padding: 0.5rem 0;
+        width: 100%; /* リンクの幅を広げる */
+        color: var(--text-color); /* main.cssの変数を使用 */
+        text-decoration: none; /* main.cssから継承されない可能性を考慮 */
+        font-weight: 500; /* main.cssから継承されない可能性を考慮 */
+        transition: color 0.3s; /* main.cssから継承されない可能性を考慮 */
+    }
+
+    .header__nav-list a:hover,
+    .header__nav-list a.active { /* アクティブなリンクのスタイルも移動 */
+        color: var(--primary-color); /* main.cssの変数を使用 */
+        font-weight: 700; /* 少し太くする */
+    }
+
+    /* ハンバーガーメニューのアクティブ時のスタイル (バツ印) */
+    .header__menu-button.is-active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .header__menu-button.is-active span:nth-child(2) {
+        opacity: 0;
+    }
+    .header__menu-button.is-active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* --- main.css からマージしたスタイル --- */
+
+    /* --- ヘッダー (ロゴ、インナーパディング) --- */
+    /* .header__menu-button は既に上で定義済み */
+    .header__inner {
+        /* モバイルでのヘッダー内側のパディングを調整 */
+        /* Flexboxでロゴとメニューボタンを両端揃え、垂直中央揃え */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* デスクトップ用の中央揃えスタイルをリセット */
+        max-width: none;
+        margin: 0;
+        padding: 0.5rem 1rem;
+    }
+
+    .header__logo img {
+        /* モバイルでのロゴの高さを調整 */
+        height: 40px;
+    }
+
+    /* --- ヒーローセクション --- */
+    .hero {
+        /* モバイルでのヘッダー高さを考慮したパディング (固定ヘッダーの場合) */
+        /* 必要であれば JavaScript で動的に調整することも検討 */
+        padding-top: 60px;
+        /* モバイルでのビューポートに対する高さを調整 */
+        height: 80vh;
+    }
+
+    .hero__title {
+        /* モバイルでのタイトルフォントサイズ */
+        font-size: 2rem;
+    }
+
+    .hero__subtitle {
+        /* モバイルでのサブタイトルフォントサイズ */
+        font-size: 1.2rem;
+    }
+
+    /* --- 共通セクション --- */
+    .section {
+        /* モバイルでのセクション上下、左右のパディング */
+        padding: 3rem 1rem;
+    }
+
+    .section__title {
+        /* モバイルでのセクションタイトルフォントサイズ */
+        font-size: 2rem;
+        /* モバイルでのタイトル下のマージン */
+        margin-bottom: 2rem;
+    }
+
+    .section__lead {
+        /* モバイルでのリード文フォントサイズ */
+        font-size: 0.95rem;
+    }
+
+    /* --- サービスグリッド --- */
+    .service-grid {
+        /* モバイルでは1カラム表示 */
+        display: grid; /* displayプロパティを明示 */
+        grid-template-columns: 1fr;
+        /* モバイルでのアイテム間ギャップ */
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        /* モバイルでのカード内パディング */
+        padding: 1.5rem;
+    }
+
+    .service-card h3 {
+        /* モバイルでのカードタイトルフォントサイズ */
+        font-size: 1.3rem;
+    }
+
+    /* --- フッター --- */
+    .footer__content {
+        /* モバイルでは縦積み、中央揃え */
+        display: flex; /* displayプロパティを明示 */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        /* モバイルでの要素間ギャップ */
+        gap: 1.5rem;
+    }
+
+    .footer__nav ul {
+        /* モバイルでは縦積み、中央揃え */
+        display: flex; /* displayプロパティを明示 */
+        flex-direction: column;
+        align-items: center;
+        /* リストのデフォルトスタイルをリセット */
+        padding-left: 0;
+        list-style: none;
+        /* モバイルでのナビゲーション項目間ギャップ */
+        gap: 1rem;
+    }
+}

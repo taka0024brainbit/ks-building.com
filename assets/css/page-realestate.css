@@ -1,0 +1,14 @@
+/* 不動産サービスページ固有スタイル */
+
+/* メインビジュアル アニメーション */
+@keyframes realestate-bg-animation {
+    0%, 100% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/realestate/afloimagemart_sample_178262094.jpg'); }
+    25% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/realestate/afloimagemart_sample_225760583.jpg'); }
+    50% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/realestate/afloimagemart_sample_268458966.jpg'); }
+    75% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/realestate/afloimagemart_sample_278565980.jpg'); }
+}
+
+.hero.realestate {
+    /* 共通スタイルは main.css に依存 */
+    animation: realestate-bg-animation 20s infinite; /* 20秒で1周、無限ループ */
+}

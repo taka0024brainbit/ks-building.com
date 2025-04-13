@@ -1,0 +1,14 @@
+/* ホームページ固有スタイル */
+
+/* メインビジュアル アニメーション */
+@keyframes hero-bg-animation {
+    0%, 100% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero/afloimagemart_sample_132729987.jpg'); }
+    25% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero/afloimagemart_sample_220813309.jpg'); }
+    50% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero/afloimagemart_sample_40221200012.jpg'); }
+    75% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero/afloimagemart_sample_40240422952.jpg'); }
+}
+
+.hero {
+    /* 共通スタイルは main.css に残し、アニメーションのみ指定 */
+    animation: hero-bg-animation 20s infinite; /* 20秒で1周、無限ループ */
+}

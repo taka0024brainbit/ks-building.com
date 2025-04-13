@@ -1,0 +1,96 @@
+/* 会社概要ページ固有スタイル */
+
+/* 企業理念セクション */
+.philosophy-container {
+    margin-top: 40px;
+}
+
+.philosophy-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #0056b3; /* 会社概要ページのテーマカラーに合わせる */
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.philosophy-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.philosophy-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0056b3; /* 会社概要ページのテーマカラーに合わせる */
+    margin-bottom: 10px;
+}
+
+.philosophy-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* 企業情報テーブル */
+.company-info {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.company-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 3rem; /* テーブルの上のスペース */
+}
+
+.company-table th,
+.company-table td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: left; /* セルのテキストを左揃えに */
+}
+
+.company-table th {
+    background: var(--light-gray);
+    width: 30%;
+    font-weight: 500; /* 見出しの太さを調整 */
+}
+
+.company-table ul {
+    margin-left: 0; /* デフォルトのリストマージンをリセット */
+    padding-left: 1.2rem; /* 箇条書きのインデント調整 */
+    list-style-position: outside; /* マーカーを外側に */
+}
+
+.company-table ul li {
+    margin-bottom: 0.5rem; /* リストアイテム間のスペース */
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+    .philosophy-item {
+        padding: 15px;
+    }
+
+    .philosophy-title {
+        font-size: 1.1rem;
+    }
+
+    .company-table th,
+    .company-table td {
+        padding: 0.8rem; /* モバイルではパディングを少し小さく */
+    }
+
+    .company-table th {
+        width: 40%; /* モバイルでは見出し列の幅を少し広げる */
+    }
+}
+
+/* サブページのヒーローセクション（もし共通化するなら main.css へ） */
+.hero--sub {
+    height: 50vh; /* サブページのヒーローは少し低く */
+    min-height: 300px; /* 最小高さを設定 */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero/afloimagemart_sample_40221200012.jpg'); /* 固定背景画像 */
+    background-attachment: fixed; /* 背景画像を固定 */
+    animation: none; /* ホームページのアニメーションを無効化 */
+}
