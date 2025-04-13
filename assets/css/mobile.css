@@ -98,9 +98,24 @@
         padding: 0.5rem 1rem;
     }
 
+    .header__logo {
+        /* ロゴの左寄せ設定 */
+        margin-left: 0;
+        text-align: left;
+    }
+    
+    /* または、必要に応じて */
+    .header__logo a {
+        display: flex;
+        justify-content: flex-start;
+    }
+
     .header__logo img {
         /* モバイルでのロゴの高さを調整 */
         height: 40px;
+        width: auto;
+        margin-left: 0;
+        text-align: left;
     }
 
     /* --- ヒーローセクション --- */
