@@ -41,7 +41,7 @@ body {
 }
 
 .header__logo img {
-    height: 50px;
+    height: 100px;
 }
 
 .header__nav-list {
@@ -55,10 +55,34 @@ body {
     color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s;
+    padding: 0.5em 0; /* 上下のパディングを追加して垂直位置を調整 */
+    display: inline-block; /* パディングを有効にするため */
 }
 
 .header__nav-list a:hover {
     color: var(--primary-color);
+}
+
+/* ハンバーガーメニューボタン */
+.header__menu-button {
+    display: none; /* デフォルトは非表示 */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1010; /* ナビゲーションより手前に */
+    position: relative; /* spanの絶対配置のため */
+    width: 40px;
+    height: 40px;
+}
+
+.header__menu-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px auto; /* 中央寄せ */
+    transition: transform 0.3s, opacity 0.3s;
 }
 
 /* メインビジュアル */
@@ -253,6 +277,17 @@ body {
 
 .footer__nav ul {
     display: flex;
+    .header__inner {
+        align-items: center; /* 垂直中央揃えを明示的に指定 */
+    }
+
+    .header__logo img {
+        height: 40px; /* モバイルでは少し小さく */
+    }
+
+
+
+        align-self: center; /* Flexアイテムとして垂直中央揃え */
     list-style: none;
     gap: 2rem;
 }
@@ -275,10 +310,55 @@ body {
 
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
-    .header__nav {
-        display: none;
+    .header__menu-button {
+        display: block; /* モバイルで表示 */
     }
 
+    .header__nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%; /* または適切な幅 */
+        max-width: 300px; /* 最大幅 */
+        height: 100vh;
+        background-color: var(--white);
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        transform: translateX(100%); /* 初期状態は画面外 */
+        transition: transform 0.3s ease-in-out;
+        padding-top: 80px; /* ヘッダーの高さ分下げる */
+        z-index: 1005; /* ボタンよりは後ろ */
+        overflow-y: auto; /* メニューが多い場合にスクロール */
+    }
+
+    .header__nav.is-active {
+        transform: translateX(0); /* アクティブ時に表示 */
+    }
+
+    .header__nav-list {
+        flex-direction: column; /* 縦並び */
+        align-items: flex-start; /* 左寄せ */
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+     .header__nav-list a {
+        font-size: 1.1rem; /* 少し小さく */
+        display: block; /* クリック範囲を広げる */
+        padding: 0.5rem 0;
+    }
+
+    /* ハンバーガーメニューのアクティブ時のスタイル (バツ印) */
+    .header__menu-button.is-active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .header__menu-button.is-active span:nth-child(2) {
+        opacity: 0;
+    }
+    .header__menu-button.is-active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* 既存のレスポンシブスタイル調整 */
     .hero__title {
         font-size: 2rem;
     }
@@ -321,6 +401,7 @@ body {
 .button:hover {
     background-color: var(--secondary-color);
 }
+
 
 .button--small {
     padding: 0.5rem 1rem;
