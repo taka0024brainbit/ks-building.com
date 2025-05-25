@@ -67,3 +67,8 @@ https://imagemart.jp/ja/contents/163335878
 
 -   安全管理を徹底している様子を示す写真（安全点検、朝礼など）
 https://imagemart.jp/ja/contents/281803762
+
+## リフォーム
+
+- バナー用
+https://imagemart.jp/ja/contents/24462726

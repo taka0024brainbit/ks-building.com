@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お子様の独立後リフォームガイド | ケイエスビルド株式会社</title>
+    <meta name="description" content="お子様の独立後、新しい暮らしへのリフォームガイド。悩み・解決策・リフォームの流れを分かりやすくご紹介。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/page-reform.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    <style>
+      /* リフォームガイドに合った安心感・清潔感・前向きさ重視の配色 */
+      .reform-title-section { text-align:center; margin: 2em 0 1.5em 0; padding-top: 90px; }
+      .reform-title-section h1 { color: #25629c; font-size: 2.2rem; font-weight: bold; letter-spacing: 0.05em; }
+      .reform-flow-section { background: #f4f8fb; border-radius: 16px; margin: 2em 0; padding: 2em 1em; }
+      .reform-step-list { display: flex; flex-direction: column; align-items: center; gap: 1.2em; margin: 2em 0 1em 0; }
+      .reform-step { display: flex; align-items: center; gap: 1em; }
+      .reform-step-circle { width: 60px; height: 60px; border-radius: 50%; background: #f6ad55; border: 2px solid #e2a03f; color: #fff; font-size: 1.5rem; font-weight: bold; display: flex; align-items: center; justify-content: center; }
+      .reform-step-label { color: #25629c; font-size: 1rem; margin: 0; text-align: left; min-width: 6em; }
+      .reform-problem-section h2,
+      .reform-solution-section h2,
+      .reform-flow-section h2 { color: #25629c; background: #eaf3fa; border-radius: 15px; border: 2px solid #25629c; display: inline-block; padding: 0.5em 2em; font-size: 1.3rem; font-weight: bold; margin-bottom: 1em; }
+      .reform-problem-list, .reform-solution-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5em; margin: 2em 0; }
+      .reform-problem, .reform-solution { background: #f4f8fb; border-radius: 12px; box-shadow: 0 2px 8px rgba(44,82,130,0.06); padding: 1.2em 1em; min-width: 220px; max-width: 260px; text-align: center; border: 2px solid #25629c; color: #25629c; }
+      .reform-problem { border-left: 8px solid #f6ad55; }
+      .reform-solution { border-left: 8px solid #7bc47f; }
+      .reform-goal-section { background: #f4f8fb; border-radius: 16px; text-align: center; margin: 2.5em 0 1.5em 0; padding: 2em 1em; border: 2px solid #25629c; color: #25629c; }
+      .reform-goal-section h2 { color: #25629c; font-size: 2rem; font-weight: bold; margin-bottom: 0.5em; }
+      .reform-current-section h2 { color: #25629c; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.3em; }
+      @media (max-width: 700px) {
+        .reform-problem-list, .reform-solution-list, .reform-step-list { flex-direction: column; gap: 1em; }
+        .reform-problem, .reform-solution { min-width: 0; max-width: 100%; }
+      }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__logo">
+                <a href="/">
+                    <img src="img/rogo.svg" alt="ケイエスビルド株式会社" width="200" height="50">
+                </a>
+            </h1>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="/consulting.html">コンサルティング事業</a></li>
+                    <li><a href="/#realestate">不動産サービス</a></li>
+                    <li><a href="/#construction">建設・工事サービス</a></li>
+                    <li><a href="/company.html">会社概要</a></li>
+                </ul>
+            </nav>
+            <button class="header__menu-button" aria-label="メニューを開閉">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+      <!-- 1. ヒーロービジュアル -->
+      <section class="hero-section">
+        <img src="img/reform/hero_dummy.jpg" alt="リフォームイメージ" class="hero-img" style="width:100%; max-height:420px; object-fit:cover;">
+        <div class="hero-text">
+          <h1>お子様の独立後、新しい暮らしへのリフォームガイド</h1>
+          <p>新しい人生のステージを、もっと快適に。</p>
+        </div>
+      </section>
+
+      <!-- 2. リフォームのきっかけ・悩み -->
+      <section class="problem-section" style="display:flex; align-items:center; gap:3vw; margin:4em 0;">
+        <img src="img/reform/problem_dummy.jpg" alt="悩みイメージ" style="width:40vw; max-width:420px; border-radius:16px;">
+        <div>
+          <h2>こんなお悩みありませんか？</h2>
+          <ul>
+            <li>子ども部屋が空いてもったいない</li>
+            <li>将来の足腰が心配になってきた</li>
+            <li>趣味を楽しむスペースが欲しい</li>
+            <li>物が多くてすっきりしない</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 3. 解決策の提案 -->
+      <section class="solution-section" style="display:flex; flex-direction:row-reverse; align-items:center; gap:3vw; margin:4em 0;">
+        <img src="img/reform/solution_dummy.jpg" alt="解決策イメージ" style="width:40vw; max-width:420px; border-radius:16px;">
+        <div>
+          <h2>私たちがご提案する4つの解決策</h2>
+          <ul>
+            <li>間取り変更（3LDK→広々2LDK）</li>
+            <li>バリアフリー（段差解消・手すり設置）</li>
+            <li>趣味の空間（書斎・アトリエ・音楽室）</li>
+            <li>収納リフォーム（壁面収納で整理整頓）</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 4. 施工事例 -->
+      <section class="case-section" style="margin:4em 0;">
+        <h2 style="text-align:center;">施工事例</h2>
+        <div class="case-list" style="display:flex; flex-wrap:wrap; gap:2vw; justify-content:center;">
+          <div class="case-item" style="width:320px; background:#fff; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06); padding:1em;">
+            <img src="img/reform/case_before_dummy.jpg" alt="ビフォー" style="width:48%; border-radius:8px; margin-right:2%;">
+            <img src="img/reform/case_after_dummy.jpg" alt="アフター" style="width:48%; border-radius:8px;">
+            <div style="margin-top:0.5em; font-weight:bold;">ご要望：子ども部屋を趣味空間に</div>
+            <div style="font-size:0.95em;">リフォーム内容：壁を撤去し、明るい書斎に変更</div>
+          </div>
+          <!-- 他の事例も同様に追加 -->
+        </div>
+      </section>
+
+      <!-- 6. リフォームの流れ -->
+      <section class="flow-section" style="margin:4em 0;">
+        <h2 style="text-align:center;">リフォームの流れ</h2>
+        <div class="flow-list" style="display:flex; flex-wrap:wrap; gap:2vw; justify-content:center;">
+          <div class="flow-step" style="width:120px; text-align:center;">
+            <img src="img/reform/step1_dummy.jpg" alt="無料相談" style="width:100px; height:100px; object-fit:cover; border-radius:50%;">
+            <div>無料相談</div>
+          </div>
+          <div class="flow-step" style="width:120px; text-align:center;">
+            <img src="img/reform/step2_dummy.jpg" alt="プラン提案" style="width:100px; height:100px; object-fit:cover; border-radius:50%;">
+            <div>プラン提案</div>
+          </div>
+          <!-- 他のステップも同様に追加 -->
+        </div>
+      </section>
+      <!-- 8. お問い合わせ・資料請求 -->
+      <section class="contact-section" style="text-align:center; margin:4em 0;">
+        <div>
+          <script type="text/javascript">
+            <!--
+            function converter(M){
+            var str="", str_as="";
+            for(var i=0;i<M.length;i++){
+            str_as = M.charCodeAt(i);
+            str += String.fromCharCode(str_as + 1);
+            }
+            return str;
+            }
+            function mail_to(k_1,k_2)
+            {eval(String.fromCharCode(108,111,99,97,116,105,111,110,46,104,114,101,102,32,
+            61,32,39,109,97,105,108,116,111,58)
+            + escape(k_1) +
+            converter(String.fromCharCode(104,109,101,110,63,106,114,44,97,116,104,107,99,104,109,102,45,98,110,108,
+            62,114,116,97,105,100,98,115,60))
+            + escape(k_2) + "'");}
+            document.write('<a href=JavaScript:mail_to("","") class="contact-btn" style="display:inline-block; background:#25629c; color:#fff; font-size:1.2rem; padding:1em 2em; border-radius:8px; text-decoration:none;">お問い合わせ・資料請求はこちら</a>');
+            //-->
+            </script>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <img src="img/rogo.svg" alt="ケイエスビルド株式会社" width="150" height="40">
+                </div>
+                <nav class="footer__nav">
+                    <ul>
+                        <li><a href="/consulting.html">コンサルティング事業</a></li>
+                        <li><a href="/#realestate">不動産サービス</a></li>
+                        <li><a href="/#construction">建設・工事サービス</a></li>
+                        <li><a href="/company.html">会社概要</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer__copyright">&copy; 2024 ケイエスビルド株式会社 All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 
