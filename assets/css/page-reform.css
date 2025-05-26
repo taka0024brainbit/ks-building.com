@@ -181,4 +181,53 @@
     border-radius: 6px !important;
     margin-bottom: 0.5em !important;
   }
+  .flow-section {
+    padding: 0.5em 0.5em;
+    background: #f4f8fb;
+  }
+  .flow-list-vertical {
+    gap: 1em;
+  }
+  .flow-step-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(44,82,130,0.08);
+    padding: 1em 0.7em 1.2em 0.7em;
+    margin: 0 0 1em 0;
+    min-width: 0;
+  }
+  .flow-badge {
+    margin-bottom: 0.5em;
+    width: 2em;
+    height: 2em;
+    min-width: 2em;
+    max-width: 2em;
+    font-size: 1.1em;
+    border-radius: 50%;
+    background: #fbbf24;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px #f59e0b33;
+  }
+  .flow-title {
+    width: 100%;
+    margin: 0 0 0.3em 0;
+    font-weight: bold;
+    color: #6b46c1;
+    font-size: 1.08em;
+    text-align: center;
+  }
+  .flow-desc {
+    width: 100%;
+    margin: 0;
+    color: #25629c;
+    font-size: 0.97em;
+    text-align: center;
+    line-height: 1.6;
+  }
 }
