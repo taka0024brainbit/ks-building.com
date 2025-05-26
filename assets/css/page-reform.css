@@ -144,17 +144,20 @@
     margin: 0 0.1em;
   }
   .problem-section, .solution-section {
-    gap: 0.5em;
+    display: block !important;
     padding: 0.2em 0.2em;
-    font-size: 0.95em;
     margin: 0.5em 0 0.5em 0;
   }
   .problem-img, .solution-img {
+    display: block;
     width: 80vw;
     max-width: 320px;
-    display: block;
     margin: 0.2em auto 1em auto;
     border-radius: 10px;
+  }
+  .problem-section > div, .solution-section > div {
+    width: 100%;
+    margin: 0 auto;
   }
   .problem-section ul, .solution-section ul {
     font-size: 0.95em;
