@@ -1,0 +1,42 @@
+/* reform.html専用 カード詳細セクション・カード用スタイル */
+.solution-detail-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+  margin-bottom: 4em;
+  font-size: 1.1em;
+}
+
+.solution-card {
+  background: #f4f8fb;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44,82,130,0.06);
+  padding: 1.5em 1.2em;
+  width: 90%;
+  margin: 0 auto 0 auto;
+  border: 2px solid #25629c;
+  color: #25629c;
+}
+
+.solution-card-title {
+  color: #25629c;
+  font-size: 1.15em;
+  margin-bottom: 0.7em;
+}
+
+.solution-card-list {
+  margin-top: 0.7em;
+  padding-left: 1.5em;
+}
+
+@media (max-width: 700px) {
+  .solution-card {
+    width: 100%;
+    padding: 1em 0.5em;
+  }
+  .solution-detail-section {
+    gap: 1em;
+    font-size: 1em;
+  }
+}

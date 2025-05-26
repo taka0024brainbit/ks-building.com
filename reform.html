@@ -32,6 +32,78 @@
         .reform-problem-list, .reform-solution-list, .reform-step-list { flex-direction: column; gap: 1em; }
         .reform-problem, .reform-solution { min-width: 0; max-width: 100%; }
       }
+      .hero-section {
+        margin: 2em 0 2em 0;
+        position: relative;
+        text-align: center;
+      }
+      .hero-img {
+        width: 100%;
+        max-height: 520px;
+        object-fit: cover;
+        border-radius: 18px;
+        margin-top: 10em;
+        margin-bottom: 1.5em;
+        box-shadow: 0 4px 24px rgba(44,82,130,0.10);
+      }
+      .hero-text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        background: rgba(37,98,156,0.75);
+        padding: 1.5em 2em;
+        border-radius: 16px;
+        box-shadow: 0 2px 8px rgba(44,82,130,0.10);
+        max-width: 90vw;
+      }
+      @media (max-width: 700px) {
+        .hero-img {
+          max-height: none;
+          height: auto;
+          border-radius: 10px;
+        }
+        .hero-text {
+          position: static;
+          transform: none;
+          background: #25629c;
+          color: #fff;
+          margin-top: -2em;
+          margin-bottom: 1em;
+          padding: 1em 0.5em;
+          border-radius: 10px;
+          width: 95vw;
+          max-width: 100%;
+        }
+        .hero-section {
+          margin: 1em 0 1em 0;
+        }
+      }
+      .flow-section {
+        width: 100vw;
+        max-width: 1400px;
+        margin: 4em auto;
+      }
+      .flow-list-vertical { width:100%; display:flex; flex-direction:column; gap:2em; margin:0; padding:0; }
+      .flow-step-vertical { display:flex; align-items:flex-start; width:100%; margin-bottom:1.2em; }
+      .flow-badge { width:2em; min-width:2em; max-width:2em; flex-shrink:0; display:flex; align-items:center; justify-content:center; background:#fbbf24; color:#fff; font-weight:bold; font-size:1.2em; border-radius:50%; box-shadow:0 2px 6px #f59e0b33; }
+      .flow-title { margin-left:1em; width:10em; min-width:10em; max-width:10em; font-weight:bold; color:#6b46c1; font-size:1.1em; }
+      .flow-desc { margin-left:1em; width:calc(100% - 12em); color:#25629c; font-size:1.05em; }
+      @media (max-width: 600px) {
+        .flow-section, .flow-list-vertical { max-width: 98vw; }
+        .flow-title { font-size: 1em; }
+      }
+      .reform-lead-section { text-align:center; margin:2.5em 0; font-size:1.5em; }
+      .reform-lead-text { font-size:1.2em; color:#25629c; line-height:1.8; margin:0 auto; }
+      .problem-section { display:flex; align-items:center; gap:3vw; margin:4em 0; font-size:1.1em; }
+      .problem-img { width:40vw; max-width:420px; border-radius:16px; }
+      .solution-section { display:flex; flex-direction:row-reverse; align-items:center; gap:3vw; margin:4em 0; font-size:1.1em; }
+      .solution-img { width:40vw; max-width:420px; border-radius:16px; }
+      .solution-detail-section { display:flex; flex-direction:column; gap:2em; justify-content:center; margin-bottom:4em; font-size:1.1em; }
+      .solution-card { background:#f4f8fb; border-radius:12px; box-shadow:0 2px 8px rgba(44,82,130,0.06); padding:1.5em 1.2em; width:90%; margin:0 auto 0 auto; border:2px solid #25629c; color:#25629c; }
+      .solution-card-title { color:#25629c; font-size:1.15em; margin-bottom:0.7em; }
+      .solution-card-list { margin-top:0.7em; padding-left:1.5em; }
     </style>
 </head>
 <body>
@@ -58,19 +130,29 @@
         </div>
     </header>
 
-    <main>
+    <main style="font-size:1.5rem;">
       <!-- 1. ヒーロービジュアル -->
       <section class="hero-section">
-        <img src="img/reform/hero_dummy.jpg" alt="リフォームイメージ" class="hero-img" style="width:100%; max-height:420px; object-fit:cover;">
+        <img src="img/reform/hero_dummy.jpg" alt="リフォームイメージ" class="hero-img">
         <div class="hero-text">
           <h1>お子様の独立後、新しい暮らしへのリフォームガイド</h1>
           <p>新しい人生のステージを、もっと快適に。</p>
         </div>
       </section>
 
+      <!-- リード文セクション（追加） -->
+      <section class="reform-lead-section">
+        <p class="reform-lead-text">
+          お子様の独立は、ご夫婦にとって新たな生活の始まり。使わなくなった子ども部屋を含め、
+        </p>
+        <p class="reform-lead-text">
+          これからの二人の暮らしに最適な住空間へと生まれ変わらせるリフォームをご提案します。
+        </p>
+      </section>
+
       <!-- 2. リフォームのきっかけ・悩み -->
-      <section class="problem-section" style="display:flex; align-items:center; gap:3vw; margin:4em 0;">
-        <img src="img/reform/problem_dummy.jpg" alt="悩みイメージ" style="width:40vw; max-width:420px; border-radius:16px;">
+      <section class="problem-section">
+        <img src="img/reform/problem_dummy.jpg" alt="悩みイメージ" class="problem-img">
         <div>
           <h2>こんなお悩みありませんか？</h2>
           <ul>
@@ -83,8 +165,8 @@
       </section>
 
       <!-- 3. 解決策の提案 -->
-      <section class="solution-section" style="display:flex; flex-direction:row-reverse; align-items:center; gap:3vw; margin:4em 0;">
-        <img src="img/reform/solution_dummy.jpg" alt="解決策イメージ" style="width:40vw; max-width:420px; border-radius:16px;">
+      <section class="solution-section">
+        <img src="img/reform/solution_dummy.jpg" alt="解決策イメージ" class="solution-img">
         <div>
           <h2>私たちがご提案する4つの解決策</h2>
           <ul>
@@ -96,37 +178,96 @@
         </div>
       </section>
 
-      <!-- 4. 施工事例 -->
-      <section class="case-section" style="margin:4em 0;">
-        <h2 style="text-align:center;">施工事例</h2>
-        <div class="case-list" style="display:flex; flex-wrap:wrap; gap:2vw; justify-content:center;">
-          <div class="case-item" style="width:320px; background:#fff; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06); padding:1em;">
-            <img src="img/reform/case_before_dummy.jpg" alt="ビフォー" style="width:48%; border-radius:8px; margin-right:2%;">
-            <img src="img/reform/case_after_dummy.jpg" alt="アフター" style="width:48%; border-radius:8px;">
-            <div style="margin-top:0.5em; font-weight:bold;">ご要望：子ども部屋を趣味空間に</div>
-            <div style="font-size:0.95em;">リフォーム内容：壁を撤去し、明るい書斎に変更</div>
-          </div>
-          <!-- 他の事例も同様に追加 -->
+      <!-- 解決策詳細カード群（追加） -->
+      <section class="solution-detail-section">
+        <!-- 間取り変更カード -->
+        <div class="solution-card">
+          <h3 class="solution-card-title">快適な二人暮らしを実現する間取り変更</h3>
+          <p>3LDKから広々とした2LDKへ。不要になった個室を開放することで、ゆとりある空間を確保します。壁を取り払って新しい間取りを構築することで、限られたマンションスペースを最大限に活用します。</p>
+          <ul class="solution-card-list">
+            <li>子ども部屋の壁を取り除き、リビングダイニングを拡張</li>
+            <li>主寝室を少し広げて、くつろぎの空間を充実</li>
+            <li>収納スペースを効率的に再配置</li>
+          </ul>
+        </div>
+        <!-- バリアフリーカード -->
+        <div class="solution-card">
+          <h3 class="solution-card-title">将来を見据えたバリアフリー設計</h3>
+          <p>今は元気でも、将来を見据えた住環境づくりが安心の暮らしを支えます。日常の小さなストレスを解消し、長く快適に過ごせる工夫を取り入れます。</p>
+          <ul class="solution-card-list">
+            <li>床の段差解消によるつまずき防止</li>
+            <li>浴室・トイレの手すり設置</li>
+            <li>滑りにくい床材への変更</li>
+            <li>開き戸から引き戸への変更で動線の確保</li>
+          </ul>
+        </div>
+        <!-- 趣味空間カード -->
+        <div class="solution-card">
+          <h3 class="solution-card-title">趣味を楽しむための専用空間</h3>
+          <p>これからは自分の時間を充実させるチャンス。かねてから楽しみにしていた趣味のための空間づくりをサポートします。</p>
+          <ul class="solution-card-list">
+            <li>書斎コーナーの設置</li>
+            <li>作品展示や制作に適した照明設計</li>
+            <li>防音対策を施した楽器演奏スペース</li>
+            <li>ホームシアターやリスニングルーム</li>
+          </ul>
+        </div>
+        <!-- 収納設計カード -->
+        <div class="solution-card">
+          <h3 class="solution-card-title">すっきりとした暮らしを実現する収納設計</h3>
+          <p>大型家具を処分し、壁面収納を活用することで、広々とした空間と十分な収納量を両立。必要なものを必要な場所に、美しく収められる設計です。</p>
+          <ul class="solution-card-list">
+            <li>壁面を活用したビルトイン収納</li>
+            <li>使用頻度に応じた収納計画</li>
+            <li>見せる収納と隠す収納の組み合わせ</li>
+            <li>無駄なスペースを活用した収納アイデア</li>
+          </ul>
         </div>
       </section>
 
       <!-- 6. リフォームの流れ -->
-      <section class="flow-section" style="margin:4em 0;">
+      <section class="flow-section" style="width:100vw; max-width:1400px; margin:4em auto;">
         <h2 style="text-align:center;">リフォームの流れ</h2>
-        <div class="flow-list" style="display:flex; flex-wrap:wrap; gap:2vw; justify-content:center;">
-          <div class="flow-step" style="width:120px; text-align:center;">
-            <img src="img/reform/step1_dummy.jpg" alt="無料相談" style="width:100px; height:100px; object-fit:cover; border-radius:50%;">
-            <div>無料相談</div>
-          </div>
-          <div class="flow-step" style="width:120px; text-align:center;">
-            <img src="img/reform/step2_dummy.jpg" alt="プラン提案" style="width:100px; height:100px; object-fit:cover; border-radius:50%;">
-            <div>プラン提案</div>
-          </div>
-          <!-- 他のステップも同様に追加 -->
-        </div>
+        <ol class="flow-list-vertical">
+          <li class="flow-step-vertical">
+            <div class="flow-badge">1</div>
+            <div class="flow-title">無料相談・現地調査</div>
+            <div class="flow-desc">ご希望をじっくりお伺いし、現状を確認</div>
+          </li>
+          <li class="flow-step-vertical">
+            <div class="flow-badge">2</div>
+            <div class="flow-title">プラン提案・お見積り</div>
+            <div class="flow-desc">完成イメージを共有し、詳細な見積書を提示</div>
+          </li>
+          <li class="flow-step-vertical">
+            <div class="flow-badge">3</div>
+            <div class="flow-title">ご契約</div>
+            <div class="flow-desc">納得いただいた上でのご契約</div>
+          </li>
+          <li class="flow-step-vertical">
+            <div class="flow-badge">4</div>
+            <div class="flow-title">着工前打ち合わせ</div>
+            <div class="flow-desc">工事スケジュールや注意点の確認</div>
+          </li>
+          <li class="flow-step-vertical">
+            <div class="flow-badge">5</div>
+            <div class="flow-title">工事施工</div>
+            <div class="flow-desc">進捗報告を欠かさず、安心の施工管理</div>
+          </li>
+          <li class="flow-step-vertical">
+            <div class="flow-badge">6</div>
+            <div class="flow-title">完成・お引き渡し</div>
+            <div class="flow-desc">丁寧な検査と使用方法の説明</div>
+          </li>
+          <li class="flow-step-vertical">
+            <div class="flow-badge">7</div>
+            <div class="flow-title">アフターフォロー</div>
+            <div class="flow-desc">定期点検と迅速な対応</div>
+          </li>
+        </ol>
       </section>
       <!-- 8. お問い合わせ・資料請求 -->
-      <section class="contact-section" style="text-align:center; margin:4em 0;">
+      <section class="contact-section" style="text-align:center; margin:4em 0; font-size:1.1em;">
         <div>
           <script type="text/javascript">
             <!--
