@@ -116,15 +116,18 @@
     border-radius: 6px;
   }
   .hero-text {
-    font-size: 0.82em;
-    line-height: 1.35;
-    padding: 0.2em 0.1em;
-    border-radius: 6px;
-    width: 90vw;
-    max-width: 90vw;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: static !important;
+    top: unset !important;
+    left: unset !important;
+    transform: none !important;
+    width: 95vw;
+    max-width: 100%;
+    padding: 1em 0.5em;
+    font-size: 0.98em;
+    line-height: 1.5;
+    margin: 0.5em auto 0.5em auto;
+    border-radius: 8px;
+    box-sizing: border-box;
   }
   .reform-title-section h1 {
     font-size: 1.05rem;
