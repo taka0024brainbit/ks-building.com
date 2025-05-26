@@ -144,12 +144,33 @@
     margin: 0 0.1em;
   }
   .problem-section, .solution-section {
-    gap: 0.3em;
-    margin: 1em 0 0.5em 0;
-    font-size: 0.98em;
+    gap: 0.5em;
+    padding: 0.2em 0.2em;
+    font-size: 0.95em;
+    margin: 0.5em 0 0.5em 0;
   }
   .problem-img, .solution-img {
-    border-radius: 6px;
+    width: 80vw;
+    max-width: 320px;
+    display: block;
+    margin: 0.2em auto 1em auto;
+    border-radius: 10px;
+  }
+  .problem-section ul, .solution-section ul {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin: 0.2em 0 0 1.2em;
+    padding: 0;
+  }
+  .problem-section li, .solution-section li {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 0.3em;
+  }
+  .problem-section p, .solution-section p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 0.3em;
   }
   h2 {
     font-size: 1em !important;
