@@ -255,7 +255,7 @@
     line-height: 1.6;
   }
 }
-.reform-lead-section { text-align:center; margin:2.5em 0; font-size:1.5em; }
+.reform-lead-section { text-align:center; margin:2.5em 0; font-size:1em; }
 .reform-lead-text { font-size:1.2em; color:#25629c; line-height:1.8; margin:0 auto; }
 .problem-section { display:flex; align-items:center; gap:3vw; margin:4em 0; font-size:1.1em; }
 .problem-img { width:40vw; max-width:420px; border-radius:16px; }

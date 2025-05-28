@@ -3,9 +3,9 @@
 /* メインビジュアル アニメーション */
 @keyframes hero-bg-animation {
     0%, 100% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero/afloimagemart_sample_132729987.jpg'); }
-    25% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero/afloimagemart_sample_220813309.jpg'); }
-    50% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero/afloimagemart_sample_40221200012.jpg'); }
-    75% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero/afloimagemart_sample_40240422952.jpg'); }
+    25% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero/afloimagemart_sample_132729987.jpg'); }
+    50% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero/afloimagemart_sample_132729987.jpg'); }
+    75% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/hero/afloimagemart_sample_132729987.jpg'); }
 }
 
 .hero {

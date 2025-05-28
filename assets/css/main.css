@@ -129,7 +129,7 @@ body {
 .section__lead {
     max-width: 800px; /* リード文の最大幅 */
     margin: 0 auto 2rem; /* 中央寄せと下のマージン */
-    text-align: center; /* 中央寄せ */
+    text-align: left; /* 左寄せに変更 */
     line-height: 1.8;
 }
 
