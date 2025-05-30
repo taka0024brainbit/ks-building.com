@@ -2,10 +2,10 @@
 
 /* メインビジュアル アニメーション */
 @keyframes construction-bg-animation {
-    0%, 100% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/construction/afloimagemart_sample_109235659.jpg'); }
-    25% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/construction/afloimagemart_sample_163335878.jpg'); }
-    50% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/construction/afloimagemart_sample_184653922.jpg'); }
-    75% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/construction/afloimagemart_sample_281803762.jpg'); }
+    0%, 100% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/construction/109235659.jpg'); }
+    25% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/construction/163335878.jpg'); }
+    50% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/construction/184653922.jpg'); }
+    75% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/construction/281803762.jpg'); }
 }
 
 .hero.construction {

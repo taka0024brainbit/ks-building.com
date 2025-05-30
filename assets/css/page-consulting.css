@@ -2,11 +2,11 @@
 
 /* メインビジュアル アニメーション */
 @keyframes consulting-bg-animation {
-    0%, 100% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/consulting/afloimagemart_sample_160463223.jpg'); }
-    20% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/consulting/afloimagemart_sample_178245471.jpg'); }
-    40% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/consulting/afloimagemart_sample_281011184.jpg'); }
-    60% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/consulting/afloimagemart_sample_281463161.jpg'); }
-    80% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/consulting/afloimagemart_sample_40145915969.jpg'); }
+    0%, 100% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/consulting/160463223.jpg'); }
+    20% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/consulting/178245471.jpg'); }
+    40% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/consulting/281011184.jpg'); }
+    60% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/consulting/281463161.jpg'); }
+    80% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/consulting/40145915969.jpg'); }
 }
 
 .hero.consulting {

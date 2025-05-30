@@ -2,10 +2,10 @@
 
 /* メインビジュアル アニメーション */
 @keyframes realestate-bg-animation {
-    0%, 100% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/realestate/afloimagemart_sample_178262094.jpg'); }
-    25% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/realestate/afloimagemart_sample_225760583.jpg'); }
-    50% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/realestate/afloimagemart_sample_268458966.jpg'); }
-    75% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/realestate/afloimagemart_sample_278565980.jpg'); }
+    0%, 100% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/realestate/178262094.jpg'); }
+    25% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/realestate/225760583.jpg'); }
+    50% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/realestate/268458966.jpg'); }
+    75% { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/realestate/278565980.jpg'); }
 }
 
 .hero.realestate {
